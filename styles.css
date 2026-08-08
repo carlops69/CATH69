@@ -140,10 +140,13 @@ body {
 }
 
 .logo-sub {
-    font-size: 0.7rem;
-    font-weight: 300;
-    color: var(--text-secondary);
-    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -243,6 +246,14 @@ body {
     overflow: hidden;
 }
 
+.hero-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -295,6 +306,7 @@ body {
     z-index: 2;
     max-width: 800px;
     animation: fade-in-up 0.8s ease-out forwards;
+    width: 100%;
 }
 
 .hero-badge {
@@ -1272,18 +1284,30 @@ body {
 @media (max-width: 768px) {
     .hero {
         padding: 5rem 1.5rem 3rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .hero-title {
         font-size: 2.2rem;
     }
 
+    .hero-description {
+        text-align: left;
+    }
+
     .hero-actions {
         flex-direction: column;
+        align-items: center;
     }
 
     .hero-stats {
         gap: 1.5rem;
+        justify-content: center;
     }
 
     .hero-visual {

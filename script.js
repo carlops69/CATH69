@@ -227,6 +227,61 @@
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    /* ===== CUSTOM CURSOR ===== */
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    const cursorHoverable = 'a, button, .btn, .filter-btn, .project-link, .social-link, .back-to-top, .nav-link, .contact-btn-link, .project-card, .service-card, .skill-category, input, textarea, [tabindex]';
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let dotX = 0;
+    let dotY = 0;
+    let ringX = 0;
+    let ringY = 0;
+    const dotLerp = 0.2;
+    const ringLerp = 0.1;
+
+    function handleMouseMove(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        const target = e.target;
+        if (target.closest(cursorHoverable)) {
+            cursorRing.classList.add('hover');
+        } else {
+            cursorRing.classList.remove('hover');
+        }
+
+        if (target.tagName === 'A' || target.closest('a')) {
+            cursorRing.classList.add('link');
+        } else {
+            cursorRing.classList.remove('link');
+        }
+    }
+
+    function animateCursor() {
+        if (!cursorDot || !cursorRing) return;
+
+        dotX += (mouseX - dotX) * dotLerp;
+        dotY += (mouseY - dotY) * dotLerp;
+
+        ringX += (dotX - ringX) * ringLerp;
+        ringY += (dotY - ringY) * ringLerp;
+
+        cursorDot.style.left = dotX + 'px';
+        cursorDot.style.top = dotY + 'px';
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    function initCursor() {
+        if (!cursorDot || !cursorRing) return;
+        document.addEventListener('mousemove', handleMouseMove);
+        animateCursor();
+    }
+
     /* ===== INIT ===== */
     function init() {
         /* Start typing effect */
@@ -266,6 +321,9 @@
 
         /* Filter buttons */
         initFilters();
+
+        /* Custom cursor */
+        initCursor();
 
         /* Close mobile menu on link click */
         const navLinks = document.querySelectorAll('.nav-link');

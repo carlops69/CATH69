@@ -1,352 +1,157 @@
-/**
- * Portfolio JavaScript
- * carlops69 - Web, FiveM & Discord Bots
- */
+const navbar = document.getElementById('navbar');
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+const backToTop = document.getElementById('back-to-top');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+const galleryItems = document.querySelectorAll('.gallery-item');
+const cursorPaw = document.getElementById('cursor-paw');
+const cursorRing = document.getElementById('cursor-ring');
 
-(function() {
-    'use strict';
+document.addEventListener('DOMContentLoaded', function() {
+    /* Custom cat paw cursor */
+    if (cursorPaw && cursorRing) {
+        let mouseX = 0, mouseY = 0;
+        let pawX = 0, pawY = 0;
+        let ringX = 0, ringY = 0;
+        const pawLerp = 0.2;
+        const ringLerp = 0.1;
+        const hoverable = 'a, button, .cta-button, .gallery-item, .social-link, .back-to-top, .lightbox-close, .contact-value, .contact-item, input, textarea, .nav-link, [tabindex]';
 
-    /* ===== PRELOADER ===== */
-    const preloader = document.getElementById('preloader');
-    const progressBar = document.querySelector('.preloader-progress');
+        function handleMouseMove(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
 
-    if (preloader && progressBar) {
-        let progress = 0;
-        const interval = setInterval(() => {
-            progress += 2;
-            if (progress >= 100) {
-                progress = 100;
-                progressBar.style.width = '100%';
-                clearInterval(interval);
-                setTimeout(() => {
-                    preloader.style.opacity = '0';
-                    preloader.style.transition = 'opacity 0.5s ease';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                    }, 500);
-                }, 300);
-            }
-            progressBar.style.width = progress + '%';
-        }, 30);
-    }
-
-    /* ===== TYPING EFFECT ===== */
-    const typingText = document.getElementById('typingText');
-    const typingWords = ['desarrollador', 'programador', 'creador', 'innovador'];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingDelay = 500;
-
-    function type() {
-        if (!typingText) return;
-        const currentWord = typingWords[wordIndex];
-        let displayText = '';
-
-        if (isDeleting) {
-            displayText = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typingDelay = 50;
-        } else {
-            displayText = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typingDelay = 150;
-        }
-
-        typingText.textContent = displayText;
-        typingText.classList.add('typing-cursor');
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            typingDelay = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % typingWords.length;
-            typingDelay = 500;
-        }
-
-        setTimeout(type, typingDelay);
-    }
-
-    /* ===== COUNTER ANIMATION ===== */
-    const statNums = document.querySelectorAll('.stat-num');
-
-    function animateCounter(el, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        const hasPlus = el.textContent.includes('+');
-
-        function update() {
-            start += increment;
-            if (start >= target) {
-                el.textContent = hasPlus ? target + '+' : target;
+            const target = e.target;
+            if (target.closest(hoverable)) {
+                cursorRing.classList.add('hover');
+                cursorPaw.classList.add('hover');
             } else {
-                el.textContent = hasPlus ? Math.floor(start) + '+' : Math.floor(start);
-                requestAnimationFrame(update);
+                cursorRing.classList.remove('hover');
+                cursorPaw.classList.remove('hover');
+            }
+
+            if (target.tagName === 'A' || target.closest('a')) {
+                cursorPaw.classList.add('link');
+                cursorRing.classList.add('hover');
+            } else {
+                cursorPaw.classList.remove('link');
             }
         }
-        update();
+
+        function animateCursor() {
+            pawX += (mouseX - pawX) * pawLerp;
+            pawY += (mouseY - pawY) * pawLerp;
+
+            ringX += (pawX - ringX) * ringLerp;
+            ringY += (pawY - ringY) * ringLerp;
+
+            cursorPaw.style.left = pawX + 'px';
+            cursorPaw.style.top = pawY + 'px';
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+
+            requestAnimationFrame(animateCursor);
+        }
+
+        document.addEventListener('mousemove', handleMouseMove);
+        animateCursor();
     }
-
-    function startCounterAnimation() {
-        statNums.forEach(el => {
-            const target = parseInt(el.dataset.target);
-            if (!isNaN(target)) {
-                animateCounter(el, target);
-            }
-        });
-    }
-
-    /* ===== NAVBAR SCROLL ===== */
-    let lastScrollY = window.scrollY;
-    const navbar = document.getElementById('navbar');
-
-    function handleScrollNav() {
-        if (!navbar) return;
+    /* Navbar scroll effect */
+    window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    }
-
-    /* ===== BACK TO TOP ===== */
-    const backToTop = document.getElementById('backToTop');
-
-    function toggleBackToTop() {
-        if (!backToTop) return;
-        if (window.scrollY > 400) {
             backToTop.classList.add('visible');
         } else {
+            navbar.classList.remove('scrolled');
             backToTop.classList.remove('visible');
         }
-    }
+    });
 
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    /* ===== FILTER BUTTONS ===== */
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    function filterProjects(filter) {
-        projectCards.forEach(card => {
-            if (filter === 'all' || card.dataset.category === filter) {
-                card.classList.remove('hidden');
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            } else {
-                card.classList.add('hidden');
+    /* Smooth scrolling for anchor links */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
             }
         });
-    }
+    });
 
-    function initFilters() {
-        if (!filterBtns.length) return;
+    /* Mobile menu toggle */
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.dataset.filter;
-                filterProjects(filter);
-
-                window.dispatchEvent(new CustomEvent('projectsFiltered', { detail: { filter } }));
-            });
+    /* Back to top button */
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
+
+    /* Gallery lightbox */
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const imgSrc = this.querySelector('img').src;
+            const imgAlt = this.querySelector('img').alt;
+            lightboxImg.src = imgSrc;
+            lightboxImg.alt = imgAlt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
     }
 
-    /* ===== SCROLL ANIMATIONS ===== */
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    /* Gallery items fade in on scroll */
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const fadeElements = [];
-    const elementsToObserve = document.querySelectorAll(
-        '.service-card, .project-card, .skill-category, .contact-method, .contact-btn, .section-header'
-    );
-
-    elementsToObserve.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        fadeElements.push(el);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
+    const galleryObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+                entry.target.classList.add('appear');
+                galleryObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    fadeElements.forEach(el => observer.observe(el));
+    const gallerySections = document.querySelectorAll('.gallery-section');
+    gallerySections.forEach(section => {
+        galleryObserver.observe(section);
+    });
 
-    /* ===== NAVBAR MOBILE TOGGLE ===== */
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+    galleryItems.forEach(item => {
+        galleryObserver.observe(item);
+    });
+});
 
-    function toggleMobileMenu() {
-        if (!navToggle || !navMenu) return;
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    }
-
-    /* ===== NAV LINK ACTIVE ===== */
-    function setActiveNavLink() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        if (!sections.length || !navLinks.length) return;
-
-        let currentSection = 'inicio';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                currentSection = section.id;
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentSection) {
-                link.classList.add('active');
-            }
-        });
-    }
-
-    /* ===== CONTACT BUTTONS ANIMATION ===== */
-    const yearSpan = document.getElementById('currentYear');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-
-    /* ===== CUSTOM CURSOR ===== */
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorRing = document.querySelector('.cursor-ring');
-    const cursorHoverable = 'a, button, .btn, .filter-btn, .project-link, .social-link, .back-to-top, .nav-link, .contact-btn-link, .project-card, .service-card, .skill-category, input, textarea, [tabindex]';
-
-    let mouseX = 0;
-    let mouseY = 0;
-    let dotX = 0;
-    let dotY = 0;
-    let ringX = 0;
-    let ringY = 0;
-    const dotLerp = 0.2;
-    const ringLerp = 0.1;
-
-    function handleMouseMove(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-
-        const target = e.target;
-        if (target.closest(cursorHoverable)) {
-            cursorRing.classList.add('hover');
-        } else {
-            cursorRing.classList.remove('hover');
-        }
-
-        if (target.tagName === 'A' || target.closest('a')) {
-            cursorRing.classList.add('link');
-        } else {
-            cursorRing.classList.remove('link');
-        }
-    }
-
-    function animateCursor() {
-        if (!cursorDot || !cursorRing) return;
-
-        dotX += (mouseX - dotX) * dotLerp;
-        dotY += (mouseY - dotY) * dotLerp;
-
-        ringX += (dotX - ringX) * ringLerp;
-        ringY += (dotY - ringY) * ringLerp;
-
-        cursorDot.style.left = dotX + 'px';
-        cursorDot.style.top = dotY + 'px';
-        cursorRing.style.left = ringX + 'px';
-        cursorRing.style.top = ringY + 'px';
-
-        requestAnimationFrame(animateCursor);
-    }
-
-    function initCursor() {
-        if (!cursorDot || !cursorRing) return;
-        document.addEventListener('mousemove', handleMouseMove);
-        animateCursor();
-    }
-
-    /* ===== INIT ===== */
-    function init() {
-        /* Start typing effect */
-        if (typingText) {
-            setTimeout(type, 1000);
-        }
-
-        /* Start counter animation when hero is visible */
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    startCounterAnimation();
-                    heroObserver.unobserve(entry.target);
-                }
-            });
-        });
-        if (document.getElementById('inicio')) {
-            heroObserver.observe(document.getElementById('inicio'));
-        }
-
-        /* Scroll events */
-        window.addEventListener('scroll', () => {
-            handleScrollNav();
-            toggleBackToTop();
-            setActiveNavLink();
-        });
-
-        /* Mobile menu toggle */
-        if (navToggle) {
-            navToggle.addEventListener('click', toggleMobileMenu);
-        }
-
-        /* Back to top click */
-        if (backToTop) {
-            backToTop.addEventListener('click', scrollToTop);
-        }
-
-        /* Filter buttons */
-        initFilters();
-
-        /* Custom cursor */
-        initCursor();
-
-        /* Close mobile menu on link click */
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navMenu && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
-            });
-        });
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-
-    /* ===== EXPORTS FOR DEBUGGING ===== */
-    window.portfolio = {
-        filterProjects,
-        scrollToTop,
-        toggleMobileMenu
-    };
-})();

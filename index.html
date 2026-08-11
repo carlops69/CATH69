@@ -1,0 +1,1159 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>carlops69 | Desarrollo Web, FiveM & Bots Discord</title>
+    <meta name="description" content="carlops69 - Desarrollador full-stack especializado en páginas web, scripts para FiveM y bots para Discord.">
+    <meta name="keywords" content="desarrollo web, FiveM, scripts FiveM, bots Discord, programación, Lua, Node.js, carlops69">
+    <meta name="author" content="carlops69">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carlops69.github.io">
+    <meta property="og:title" content="carlops69 | Desarrollo Web, FiveM & Bots Discord">
+    <meta property="og:description" content="Desarrollador full-stack. Web, FiveM y Discord bots.">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:locale" content="es_ES">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="carlops69 | Desarrollo Web, FiveM & Bots Discord">
+    <meta name="twitter:description" content="Desarrollador full-stack. Web, FiveM y Discord bots.">
+    <meta name="twitter:image" content="logo.jpg">
+    
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="logo.jpg" alt="carlops69 Logo">
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+            <p class="preloader-text">Cargando experiencia digital...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo" aria-label="carlops69 - Inicio">
+                <img src="logo.jpg" alt="carlops69 Logo">
+                <div class="nav-logo-text">
+                    <span class="logo-main">CARLOPS</span>
+                    <span class="logo-sub">69</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot">•</span>
+                    <span>Disponible para proyectos</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Hola, soy</span>
+                    <span class="title-line title-highlight">carlops69</span>
+                    <span class="title-line">desarrollador <span class="typing-text" id="typingText"></span></span>
+                </h1>
+                <p class="hero-description">
+                    Especializado en <strong>desarrollo web</strong>, <strong>scripts para FiveM</strong> y <strong>bots para Discord</strong>.
+                    Construyo soluciones digitales que combinan funcionalidad y diseño moderno.
+                </p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <span>Ver Proyectos</span>
+                    </a>
+                    <a href="#contacto" class="btn btn-outline">
+                        <span>Hablemos</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="20">0</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="8">0</span>
+                        <span class="stat-label">Bots Discord</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="16">0</span>
+                        <span class="stat-label">Scripts FiveM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-glow"></div>
+                <div class="hero-image-wrapper">
+                    <img src="logo.jpg" alt="carlops69 Logo" class="hero-image">
+                    <div class="float-card float-card-1">
+                        <i>•</i><span>Web Dev</span>
+                    </div>
+                    <div class="float-card float-card-2">
+                        <i>•</i><span>FiveM</span>
+                    </div>
+                    <div class="float-card float-card-3">
+                        <i>•</i><span>Discord</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Servicios</span>
+                <h2 class="section-title">Especializado en <span class="text-gradient">tres tecnologías</span></h2>
+                <p class="section-subtitle">Desarrollo web, scripts FiveM y bots para Discord. Cada área con soluciones a medida.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Desarrollo Web</h3>
+                        <p class="service-description">Sitios web modernos, tiendas en línea y aplicaciones web con diseño responsive y optimización SEO.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Diseño UI/UX moderno</li>
+                            <li><i class="fas fa-check"></i> Responsive & optimizado</li>
+                            <li><i class="fas fa-check"></i> Panel de administración</li>
+                            <li><i class="fas fa-check"></i> Optimización SEO</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">HTML/CSS/JS</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card service-card-featured">
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Scripts FiveM</h3>
+                        <p class="service-description">Scripts personalizados para servidores GTA V Roleplay, desde sistemas de economía hasta mecánicas únicas.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Scripts ESX & QBCore</li>
+                            <li><i class="fas fa-check"></i> Sistemas con UI personalizada</li>
+                            <li><i class="fas fa-check"></i> Base de datos MySQL</li>
+                            <li><i class="fas fa-check"></i> Integración con ox_lib</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">Lua</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Bots Discord</h3>
+                        <p class="service-description">Bots avanzados para moderación, música, tickets, economía y automatización de comunidades.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Moderación avanzada</li>
+                            <li><i class="fas fa-check"></i> Música & streaming</li>
+                            <li><i class="fas fa-check"></i> Sistema de tickets</li>
+                            <li><i class="fas fa-check"></i> Slash commands</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">discord.js</span>
+                            <span class="tech-tag">discord-player</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Proyectos <span class="text-gradient">Destacados</span></h2>
+                <p class="section-subtitle">Una selección de los proyectos que he desarrollado en las tres áreas en las que me especializo.</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="fivem">FiveM</button>
+                <button class="filter-btn" data-filter="discord">Discord</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">CATH-OS</h3>
+                        <p class="project-desc">Bot profesional para tiendas online con sistema de tickets, verificación, moderación y panel de administración completo.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js v14</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• 25+ comandos</span>
+                            <span>• Tickets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">BeatFlow</h3>
+                        <p class="project-desc">Bot de música con soporte para YouTube, Spotify y SoundCloud. Reproduce, pausa, saltea y gestiona colas de reproducción.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord-player</span>
+                            <span>FFmpeg</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• play, skip, stop, queue</span>
+                            <span>• HD Audio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">Sentinel</h3>
+                        <p class="project-desc">Bot de moderación con comandos organizados en categorías, auto-roles, gestión de usuarios y logging completo.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js v14</span>
+                            <span>nodemon</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Moderación</span>
+                            <span>• Utility</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">RateLine</h3>
+                        <p class="project-desc">Bot de tienda virtual con listings, categorías, sistema de tickets de compra y soporte multilingüe (ES/EN).</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js v14</span>
+                            <span>JSON Store</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Tienda integrada</span>
+                            <span>• Multi-idioma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">VoiceLog</h3>
+                        <p class="project-desc">Registra todas las actividades de canales de voz, incluye duración de sesiones y notificaciones detalladas.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js v14</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Voice logging</span>
+                            <span>• Duración</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">SwiftMove</h3>
+                        <p class="project-desc">Sistema de soporte que asigna usuarios y staff a canales de voz automáticamente con seguimiento de sesiones.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js v14</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Soporte voz</span>
+                            <span>• Auto-asignación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">Artybot</h3>
+                        <p class="project-desc">Bot de inspiración artística que genera retos creativos diarios, consejos de dibujo y feedback sobre obras.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>discord.js</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Retos creativos</span>
+                            <span>• Consejos arte</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="discord">
+                    <div class="project-image">
+                        <div class="project-placeholder discord-bg">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Bot Discord</span>
+                        <h3 class="project-title">MECCHA CHAMELEON</h3>
+                        <p class="project-desc">Bot comunitario para el juego MECCHA CHAMELEON con comandos personalizados y sistema de despliegue de comandos.</p>
+                        <div class="project-tech">
+                            <span>ECMAScript</span>
+                            <span>discord.js v14</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Comunidad gaming</span>
+                            <span>• Custom commands</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder web-bg">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Live demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Sitio Web</span>
+                        <h3 class="project-title">Carlops Digital Works</h3>
+                        <p class="project-desc">Sitio web corporativo completo para mi marca personal, con SEO, sistema de contacto y sección de proyectos.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• SEO Optimizado</span>
+                            <span>• Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder web-bg">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">E-commerce</span>
+                        <h3 class="project-title">Tienda Mechitas</h3>
+                        <p class="project-desc">Tienda online completa con pasarela de pagos, sistema de chat en vivo, gestión de pedidos y panel administrativo.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Node.js</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Chat en vivo</span>
+                            <span>• Admin panel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder web-bg">
+                            <i class="fas fa-pagelines"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Sitio Web</span>
+                        <h3 class="project-title">Cheny Art y Aromas</h3>
+                        <p class="project-desc">Sitio web para negocio de arte y aromaterapia con panel de administración, gestión de productos y diseño moderno.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Gestión productos</span>
+                            <span>• Admin panel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder web-bg">
+                            <i class="fas fa-tattoo"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver código"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Sitio Web</span>
+                        <h3 class="project-title">Pagina para Tatuajes</h3>
+                        <p class="project-desc">Sitio web para parlor de tatuajes con galería de trabajos, información de servicios y formulario de contacto.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Galería</span>
+                            <span>• Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_arenas</h3>
+                        <p class="project-desc">Sistema de arenas PvP con UI personalizada. Incluye menú de arenas, estadísticas y exportaciones para otros scripts.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>JS</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• PvP</span>
+                            <span>• UI integrada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_mi_admin</h3>
+                        <p class="project-desc">Panel de administración con UI integrada. Control total del servidor con interfaz gráfica y acceso rápido a herramientas.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Panel admin</span>
+                            <span>• UI integrada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_gasolineras</h3>
+                        <p class="project-desc">Sistema de gasolineras para ESX Legacy con UI integrada, locales (ES/EN) y configuración completa.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>ESX</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• ESX Legacy</span>
+                            <span>• Multi-idioma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-garage"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_mi_garaje</h3>
+                        <p class="project-desc">Sistema de garaje premium v2.0.0 con UI integrada, guardado en base de datos y gestión de vehículos.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>oxmysql</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• v2.0.0</span>
+                            <span>• Persistencia BD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_carradio</h3>
+                        <p class="project-desc">Sistema de radio de coche con soporte para YouTube. UI integrada para control de frecuencias y volumen.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>xsound</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• YouTube</span>
+                            <span>• Voice sync</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_notificaciones</h3>
+                        <p class="project-desc">Sistema de notificaciones personalizadas para ESX Legacy con soporte multilingüe y UI integrada.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>ESX</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• ESX Legacy</span>
+                            <span>• ES/EN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_Vigilancia</h3>
+                        <p class="project-desc">Sistema de vigilancia mecánica con NPC vigilante inmortal. Protección de zonas y detección de intrusos.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>ESX</span>
+                            <span>oxmysql</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• NPC guard</span>
+                            <span>• Detección</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_panel_de_admin_web</h3>
+                        <p class="project-desc">Panel de administración web e in-game v2.0.0 con mapa en tiempo real y vista espectador POV.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>Leaflet.js</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Mapa en vivo</span>
+                            <span>• SPECTATOR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_mi_clima</h3>
+                        <p class="project-desc">Sistema de control de clima con UI integrada. Cambia la meteorología del servidor en tiempo real.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Weather control</span>
+                            <span>• UI integrada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_radio</h3>
+                        <p class="project-desc">Sistema de comunicación de voz multi-framework con audio claro y dependencia en pma-voice.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>pma-voice</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Multi-framework</span>
+                            <span>• Clear audio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-id-badge"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_pedmenu</h3>
+                        <p class="project-desc">Panel de apariencia profesional v2.0.0 con UI integrada. Personaliza completamente tu personaje.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>oxmysql</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Appearance</span>
+                            <span>• UI integrada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_herramientas_staff</h3>
+                        <p class="project-desc">Comandos de staff y control de población. Herramientas de administración con integración MySQL.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>ESX</span>
+                            <span>oxmysql</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Staff tools</span>
+                            <span>• Population</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_herramientas_generado</h3>
+                        <p class="project-desc">Menú de generación de armas y vehículos para staff. Spawn instantáneo con configuración simple.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Spawn</span>
+                            <span>• Staff</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_mi_hud</h3>
+                        <p class="project-desc">HUD de interfaz de usuario con UI integrada. Muestra información del jugador con diseño limpio.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• UI integrada</span>
+                            <span>• Minimal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_mi_mecanica</h3>
+                        <p class="project-desc">Menú de mecánica con sistema de guardado. Repara y modifica vehículos con persistencia en base de datos.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>oxmysql</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Con guardado</span>
+                            <span>• MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">carlops69_multicharacter</h3>
+                        <p class="project-desc">Sistema multicharacter (Fix Final) con UI integrada. Permite gestionar múltiples personajes por cuenta.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>HTML/CSS</span>
+                            <span>oxmysql</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• vFix Final</span>
+                            <span>• UI integrada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="fivem">
+                    <div class="project-image">
+                        <div class="project-placeholder fivem-bg">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Ver detalles"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">FiveM Script</span>
+                        <h3 class="project-title">z_carlops69_zonasegura</h3>
+                        <p class="project-desc">Zonas seguras avanzadas con soporte PolyZone/CircleZone/BoxZone. Compatible con QBCore, ESX y QBox.</p>
+                        <div class="project-tech">
+                            <span>Lua</span>
+                            <span>ox_lib</span>
+                            <span>JSON</span>
+                        </div>
+                        <div class="project-stats-bar">
+                            <span>• Multi-framework</span>
+                            <span>• Zones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <p>¿Quieres ver más proyectos o tienes uno en mente?</p>
+                <a href="#contacto" class="btn btn-primary">
+                    <span>Contáctame</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Habilidades</span>
+                <h2 class="section-title">Tecnologías <span class="text-gradient">que domino</span></h2>
+                <p class="section-subtitle">Trabajo con las herramientas y lenguajes que mejor se adaptan a cada proyecto.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="skill-title">Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive</span>
+                    </div>
+                    <h3 class="skill-title" style="margin-top: 1.5rem;">Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3 class="skill-title">Discord Bots</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">discord.js</span>
+                        <span class="skill-tag">discord-player</span>
+                        <span class="skill-tag">FFmpeg</span>
+                        <span class="skill-tag">SQLite</span>
+                    </div>
+                    <h3 class="skill-title" style="margin-top: 1.5rem;">Web Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">FiveM</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Lua</span>
+                        <span class="skill-tag">oxmysql</span>
+                        <span class="skill-tag">ESX</span>
+                        <span class="skill-tag">QBCore</span>
+                    </div>
+                    <h3 class="skill-title" style="margin-top: 1.5rem;">Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="skill-title">Tools &amp; Others</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">PM2</span>
+                        <span class="skill-tag">ESLint</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">Hablemos de tu <span class="text-gradient">proyecto</span></h2>
+                    <p>¿Tienes una idea, un proyecto o simplemente quieres saludar? Contáctame directamente a través de los siguientes medios.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon discord">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">Discord</span>
+                                <span class="method-value">.carlos69</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/carlops69" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/fGC7kc9PYC" target="_blank" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/carlops69/" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-buttons" id="contactButtons">
+                    <div class="contact-btn">
+                        <a href="https://wa.me/593990076985" class="contact-btn-link" target="_blank" rel="noopener">
+                            <div class="contact-btn-icon" style="background: #25d36e;">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-btn-content">
+                                <span class="contact-btn-label">WhatsApp</span>
+                                <span class="contact-btn-value">+593 99 007 6985</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-btn">
+                        <a href="https://www.instagram.com/carlops69/" class="contact-btn-link" target="_blank" rel="noopener">
+                            <div class="contact-btn-icon" style="background: linear-gradient(45deg, #e1306c, #c13580, #bc2a83);">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-btn-content">
+                                <span class="contact-btn-label">Instagram</span>
+                                <span class="contact-btn-value">@carlops69</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-btn">
+                        <a href="https://discord.gg/fGC7kc9PYC" class="contact-btn-link" target="_blank" rel="noopener">
+                            <div class="contact-btn-icon" style="background: #5865f2;">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contact-btn-content">
+                                <span class="contact-btn-label">Discord</span>
+                                <span class="contact-btn-value">.carlos69</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#inicio">
+                            <img src="logo.jpg" alt="carlops69 Logo">
+                            <div class="footer-logo-text">
+                                <span>carlops69</span>
+                                <span>DESARROLLADOR</span>
+                            </div>
+                        </a>
+                        <p class="footer-desc">Desarrollador full-stack especializado en web, FiveM y bots para Discord.</p>
+                        <div class="social-links">
+                            <a href="https://github.com/carlops69" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://discord.gg/fGC7kc9PYC" target="_blank" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="https://www.instagram.com/carlops69/" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4 class="footer-title">Servicios</h4>
+                        <ul>
+                            <li><a href="#servicios">Desarrollo Web</a></li>
+                            <li><a href="#servicios">Scripts FiveM</a></li>
+                            <li><a href="#servicios">Bots Discord</a></li>
+                            <li><a href="#contacto">Consultoría</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 class="footer-title">Empresa</h4>
+                        <ul>
+                            <li><a href="#inicio">Sobre mí</a></li>
+                            <li><a href="#proyectos">Proyectos</a></li>
+                            <li><a href="#habilidades">Tecnologías</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4 class="footer-title">Contacto</h4>
+                        <ul>
+                            <li>Discord: .carlos69</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> carlops69. Todos los derechos reservados.</p>
+                <p class="made-with">Hecho con <i class="fas fa-heart"></i> y <i class="fas fa-code"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
+
